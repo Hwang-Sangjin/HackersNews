@@ -143,7 +143,7 @@ function newsFeed() {
   }
 
   newsList.push('</ul>');
-  newsList.push("\n        <div>\n            <a href = \"#/page/".concat(store.currentPage > 1 ? store.currentPage - 1 : 1, "\">\uC774\uC804 \uD398\uC774\uC9C0</a>\n            <a href = \"#/page/").concat(store.currentPage + 1, "\">\uB2E4\uC74C \uD398\uC774\uC9C0</a>\n        </div>\n    "));
+  newsList.push("\n        <div>\n            <a href = \"#/page/".concat(store.currentPage > 1 ? store.currentPage - 1 : 1, "\">\uC774\uC804 \uD398\uC774\uC9C0</a>\n            <a href = \"#/page/").concat(store.currentPage < 3 ? store.currentPage + 1 : 3, "\">\uB2E4\uC74C \uD398\uC774\uC9C0</a>\n        </div>\n    "));
   container.innerHTML = newsList.join('');
 }
 
